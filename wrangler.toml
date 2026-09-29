@@ -1,0 +1,14 @@
+# Cloudflare Pages 部署配置：绑定管理
+# D1 与 R2 绑定由此文件声明，推送到 main 后自动部署生效
+
+name = "cloudflare-imgbed"
+compatibility_date = "2024-08-21"
+
+[[d1_databases]]
+binding = "img_d1"
+database_name = "cloudflare-imgbed"
+database_id = "7d75d0e1-c60b-4eb9-bd68-2abe2a61fffe"
+
+[[r2_buckets]]
+binding = "img_r2"
+bucket_name = "anling-imgbed"
