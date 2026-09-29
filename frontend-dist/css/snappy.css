@@ -1,0 +1,18 @@
+/* 交互提速补丁 (2026-09-30)
+   缩短高频交互元素的过渡动画时长，让点击/悬停反馈更跟手。
+   只覆盖 transition 时长，不改变动画本身；抽屉、弹窗等转场动画不受影响。 */
+.el-button,
+.el-dropdown-menu__item,
+.el-tabs__item,
+.el-table__row,
+.el-pager li,
+.el-select-dropdown__item,
+.el-switch__core,
+.el-slider__button,
+.el-radio-button__inner,
+.el-checkbox-button__inner,
+.el-input__wrapper,
+.el-select__wrapper,
+.menu-item {
+  transition-duration: 60ms !important;
+}
