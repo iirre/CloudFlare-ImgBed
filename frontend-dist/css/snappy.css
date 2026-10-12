@@ -91,7 +91,7 @@ body .login .login-container {
 body .login .login-container .login-title {
   grid-area: title;
   justify-self: center;
-  font-size: 1.8rem !important;
+  font-size: 2rem !important;
   margin-bottom: 8px !important;
 }
 body .login .login-container .input-container {
