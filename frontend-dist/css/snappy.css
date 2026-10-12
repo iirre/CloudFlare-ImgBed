@@ -70,3 +70,50 @@ body .login .login-container {
 .login-container .input-name {
   text-shadow: 0 1px 8px rgba(0, 0, 0, .6) !important;
 }
+
+/* ============ 登录页：密码框与登录按钮左右并排 (2026-10-13) ============
+   整体缩小一号：标题 2.3rem→1.8rem，容器 600px→520px；
+   密码输入框居左占满，登录按钮居右小尺寸，两者同行。
+   注：本站登录只有一个认证码字段（input-container 单个），
+   若后台配置出多字段，此布局需再调整。 */
+body .login .login-container {
+  display: grid !important;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title title"
+    "label label"
+    "input button";
+  gap: 10px 12px !important;
+  align-items: center;
+  justify-items: stretch;
+  max-width: 520px !important;
+  padding: 28px 0 !important;
+}
+body .login .login-container .login-title {
+  grid-area: title;
+  justify-self: center;
+  font-size: 1.8rem !important;
+  margin-bottom: 4px !important;
+}
+body .login .login-container .input-container {
+  display: contents !important;
+}
+body .login .login-container .input-name {
+  grid-area: label;
+  font-size: .85rem !important;
+}
+body .login .login-container .input-wrapper {
+  grid-area: input;
+  min-width: 0;
+}
+body .login .login-container .password-input {
+  width: 100% !important;
+}
+body .login .login-container .submit {
+  grid-area: button;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 30px !important;
+  font-size: 1rem !important;
+  white-space: nowrap;
+}
