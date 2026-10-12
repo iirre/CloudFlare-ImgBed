@@ -41,15 +41,15 @@ html.dark {
    输入框瘦身（50px→44px），去掉 hover 扫光条；
    登录按钮宽度与输入框对齐（50%→80%），字间距收紧。
    仅作用于登录页，其它页面不受影响。 */
-.login-container .password-input { height: 44px !important; }
-.login-container .password-input .el-input__wrapper {
+body[data-login-page="user"] .login-container .password-input { height: 44px !important; }
+body[data-login-page="user"] .login-container .password-input .el-input__wrapper {
   padding: 10px 14px !important;
   border-radius: 10px !important;
 }
-.login-container .password-input .el-input__wrapper::before {
+body[data-login-page="user"] .login-container .password-input .el-input__wrapper::before {
   display: none !important;
 }
-.login-container .submit {
+body[data-login-page="user"] .login-container .submit {
   width: 80% !important;
   height: 44px !important;
   letter-spacing: 1px !important;
@@ -58,16 +58,16 @@ html.dark {
 /* ============ 登录页：去掉面板底框 (2026-10-13) ============
    面板改全透明、无边框、无阴影，内容直接悬浮在背景图上；
    标题和标签加文字投影，保证在花背景上可读。 */
-body .login .login-container {
+body[data-login-page="user"] .login .login-container {
   background: transparent !important;
   background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
-.login-container .login-title {
+body[data-login-page="user"] .login-container .login-title {
   text-shadow: 0 2px 16px rgba(0, 0, 0, .65) !important;
 }
-.login-container .input-name {
+body[data-login-page="user"] .login-container .input-name {
   text-shadow: 0 1px 8px rgba(0, 0, 0, .6) !important;
 }
 
@@ -76,7 +76,7 @@ body .login .login-container {
    密码输入框居左占满，登录按钮居右小尺寸，两者同行。
    注：本站登录只有一个认证码字段（input-container 单个），
    若后台配置出多字段，此布局需再调整。 */
-body .login .login-container {
+body[data-login-page="user"] .login .login-container {
   display: grid !important;
   grid-template-columns: 1fr minmax(0, 320px) auto 1fr;
   grid-template-areas:
@@ -88,7 +88,7 @@ body .login .login-container {
   max-width: 620px !important;
   padding: 28px 0 !important;
 }
-body .login .login-container .login-title {
+body[data-login-page="user"] .login .login-container .login-title {
   grid-area: title;
   justify-self: center;
   font-size: 2.8rem !important;
@@ -97,22 +97,22 @@ body .login .login-container .login-title {
   font-family: Pacifico, "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
 }
 @media (max-width: 768px) {
-  body .login .login-container .login-title { font-size: 1.6rem !important; }
+  body[data-login-page="user"] .login .login-container .login-title { font-size: 1.6rem !important; }
 }
-body .login .login-container .input-container {
+body[data-login-page="user"] .login .login-container .input-container {
   display: contents !important;
 }
-body .login .login-container .input-name {
+body[data-login-page="user"] .login .login-container .input-name {
   display: none !important;
 }
-body .login .login-container .input-wrapper {
+body[data-login-page="user"] .login .login-container .input-wrapper {
   grid-area: input;
   min-width: 0;
 }
-body .login .login-container .password-input {
+body[data-login-page="user"] .login .login-container .password-input {
   width: 100% !important;
 }
-body .login .login-container .submit {
+body[data-login-page="user"] .login .login-container .submit {
   grid-area: button;
   width: auto !important;
   margin: 0 !important;
