@@ -36,3 +36,21 @@ html.dark {
   --glass-bg: rgba(30, 30, 30, .88);
   --glass-header-bg: rgba(31, 31, 34, .88);
 }
+
+/* ============ 登录页微调 (2026-10-13) ============
+   输入框瘦身（50px→44px），去掉 hover 扫光条；
+   登录按钮宽度与输入框对齐（50%→80%），字间距收紧。
+   仅作用于登录页，其它页面不受影响。 */
+.login-container .password-input { height: 44px !important; }
+.login-container .password-input .el-input__wrapper {
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+}
+.login-container .password-input .el-input__wrapper::before {
+  display: none !important;
+}
+.login-container .submit {
+  width: 80% !important;
+  height: 44px !important;
+  letter-spacing: 1px !important;
+}
