@@ -85,14 +85,17 @@ body .login .login-container {
   gap: 16px 12px !important;
   align-items: center;
   justify-items: stretch;
-  max-width: 520px !important;
+  max-width: 620px !important;
   padding: 28px 0 !important;
 }
 body .login .login-container .login-title {
   grid-area: title;
   justify-self: center;
-  font-size: 2.2rem !important;
-  margin-bottom: 8px !important;
+  font-size: 2.8rem !important;
+  margin-bottom: 16px !important;
+}
+@media (max-width: 768px) {
+  body .login .login-container .login-title { font-size: 1.6rem !important; }
 }
 body .login .login-container .input-container {
   display: contents !important;
