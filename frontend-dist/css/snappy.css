@@ -58,8 +58,9 @@ html.dark {
 /* ============ 登录页：去掉面板底框 (2026-10-13) ============
    面板改全透明、无边框、无阴影，内容直接悬浮在背景图上；
    标题和标签加文字投影，保证在花背景上可读。 */
-.login-container {
+body .login .login-container {
   background: transparent !important;
+  background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
