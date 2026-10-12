@@ -93,6 +93,8 @@ body .login .login-container .login-title {
   justify-self: center;
   font-size: 2.8rem !important;
   margin-bottom: 16px !important;
+  /* 圆体：系统幼圆优先，其次站酷快乐体（Webfont），英文字母保持 Pacifico 花体 */
+  font-family: Pacifico, "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
 }
 @media (max-width: 768px) {
   body .login .login-container .login-title { font-size: 1.6rem !important; }
