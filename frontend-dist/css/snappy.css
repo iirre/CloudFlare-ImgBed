@@ -133,3 +133,28 @@ body .login .login-container .password-input .el-input__inner {
 body .login .login-container .password-input .el-input__inner::placeholder {
   font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
 }
+
+/* ============ 全站中文圆体：后台整体换圆体 (2026-10-13) ============
+   1) --el-font-family：覆盖所有 Element Plus 组件（表格/菜单/弹窗/按钮/输入框等）
+   2) #app：覆盖继承链上的普通文本
+   3) .el-message__content：消息提示条有单独字体声明，一并覆盖
+   保留：.token-display（密钥）、.upload-list-item-url（文件URL）的等宽字体；
+   登录页标题的 Pacifico 花体由下面的专用规则保护。 */
+:root {
+  --el-font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif !important;
+}
+#app {
+  font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif !important;
+}
+.el-message .el-message__content {
+  font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
+}
+/* 登录页标题：保持 Pacifico 花体（ImgHub）+ 圆体中文组合，不被 #app 规则覆盖 */
+#app .login .login-container .login-title {
+  font-family: Pacifico, "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
+}
+/* 密钥和文件URL保持等宽字体，不被 #app 规则覆盖 */
+#app .token-display,
+#app .upload-list-item-url .el-input__inner {
+  font-family: "Courier New", Monaco, monospace !important;
+}
