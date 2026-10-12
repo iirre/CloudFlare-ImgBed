@@ -16,3 +16,123 @@
 .menu-item {
   transition-duration: 60ms !important;
 }
+
+/* ============ TG 扁平主题 (2026-10-13) ============
+   目标：去掉毛玻璃与重阴影，换成 Telegram 转发器面板式扁平风。
+   原理：全站玻璃面都由 --glass-* 变量驱动（81+ 处引用），
+   在此统一改成实色 + 边框分层；再用 !important 兜底清掉
+   写死在各 chunk 里的 backdrop-filter。
+   配色：浅色 Telegram 蓝 #2AABEE；深色套 TG 面板
+   （底 #16181d / 卡 #1f232c / 线 #2e3442 / 蓝 #4da3ff）。 */
+
+/* --- 1. 性能：全站摘除毛玻璃（滚动卡顿头号元凶） --- */
+*,
+*::before,
+*::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* --- 2. 浅色模式：Telegram 蓝 + 玻璃面转实色 --- */
+:root {
+  --glass-backdrop-blur: 0px;
+  --glass-bg: #ffffff;
+  --glass-header-bg: #ffffff;
+  --glass-border: #e5e6eb;
+  --glass-border-hover: #c9cdd4;
+  --glass-header-border: #e5e6eb;
+  --primary-color: #2aabee;
+  --primary-color-accent: #229ed9;
+  --el-color-primary: #2aabee;
+  --el-color-primary-rgb: 42, 171, 238;
+  --el-color-primary-light-3: #6ac4f3;
+  --el-color-primary-light-5: #94d5f6;
+  --el-color-primary-light-7: #bfe5fa;
+  --el-color-primary-light-8: #d4eefc;
+  --el-color-primary-light-9: #eaf6fe;
+  --el-color-primary-dark-2: #2289be;
+  --el-color-success: #3ecf6f;
+  --el-color-warning: #ffb224;
+  --el-color-danger: #ff5d5d;
+  --el-color-error: #ff5d5d;
+  --upload-list-file-icon-color: #2aabee;
+  --el-icon--upload-color: #2aabee;
+  --el-upload-dragger-uniform-color: #2aabee;
+  --upload-title-underline-bg: #2aabee;
+  --el-box-shadow: none;
+  --el-box-shadow-light: none;
+  --el-box-shadow-lighter: none;
+  --el-box-shadow-dark: none;
+}
+
+/* --- 3. 深色模式：TG 面板原色 --- */
+html.dark {
+  --glass-backdrop-blur: 0px;
+  --glass-bg: #1f232c;
+  --glass-header-bg: #1f232c;
+  --glass-border: #2e3442;
+  --glass-border-hover: #3a4152;
+  --glass-header-border: #2e3442;
+  --bg-color: #16181d;
+  --primary-color: #4da3ff;
+  --primary-color-accent: #71b6ff;
+  --popper-bg-color: #1f232c;
+  --text-bg-color: #1f232c;
+  --el-color-primary: #4da3ff;
+  --el-color-primary-rgb: 77, 163, 255;
+  --el-color-primary-light-3: #82bfff;
+  --el-color-primary-light-5: #a6d1ff;
+  --el-color-primary-light-7: #cae3ff;
+  --el-color-primary-light-8: #dbedff;
+  --el-color-primary-light-9: #edf6ff;
+  --el-color-primary-dark-2: #71b6ff;
+  --el-color-success: #3ecf6f;
+  --el-color-warning: #ffb224;
+  --el-color-danger: #ff5d5d;
+  --el-color-error: #ff5d5d;
+  --el-bg-color-page: #16181d;
+  --el-bg-color: #1f232c;
+  --el-bg-color-overlay: #232833;
+  --el-text-color-primary: #e8eaf0;
+  --el-text-color-regular: #c3cad6;
+  --el-text-color-secondary: #9aa3b2;
+  --el-text-color-placeholder: #6b7484;
+  --el-text-color-disabled: #4d5566;
+  --el-border-color: #2e3442;
+  --el-border-color-light: #2a303d;
+  --el-border-color-lighter: #262c38;
+  --el-border-color-extra-light: #22262f;
+  --el-fill-color: #232833;
+  --el-fill-color-light: #1f232c;
+  --el-fill-color-lighter: #1a1e25;
+  --el-fill-color-blank: #1f232c;
+  --el-upload-dragger-bg-color: #1a1e25;
+  --el-upload-dragger-border: 2px dashed #2e3442;
+  --upload-list-file-icon-color: #4da3ff;
+  --el-icon--upload-color: #4da3ff;
+  --el-upload-dragger-uniform-color: #4da3ff;
+  --el-box-shadow: none;
+  --el-box-shadow-light: none;
+  --el-box-shadow-lighter: none;
+  --el-box-shadow-dark: none;
+}
+
+/* --- 4. 形状与分层：卡片 12px、按钮 8px，靠 1px 边框分层（不用阴影） --- */
+.el-card {
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+.el-dialog,
+.el-message-box {
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  border: 1px solid var(--glass-border);
+}
+.el-button {
+  border-radius: 8px;
+}
+.el-dropdown-menu,
+.el-select-dropdown,
+.el-popper {
+  box-shadow: none !important;
+}
