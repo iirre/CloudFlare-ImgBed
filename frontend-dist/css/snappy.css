@@ -82,7 +82,7 @@ body .login .login-container {
   grid-template-areas:
     "title title"
     "input button";
-  gap: 10px 12px !important;
+  gap: 16px 12px !important;
   align-items: center;
   justify-items: stretch;
   max-width: 520px !important;
@@ -92,7 +92,7 @@ body .login .login-container .login-title {
   grid-area: title;
   justify-self: center;
   font-size: 1.8rem !important;
-  margin-bottom: 4px !important;
+  margin-bottom: 8px !important;
 }
 body .login .login-container .input-container {
   display: contents !important;
