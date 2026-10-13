@@ -25,7 +25,9 @@
 })();
 /* 用户登录页：左上角 logo 改链到本站首页（原链向上游 GitHub） */
 (function(){var n=0;function f(){
-  var a = document.querySelector('.login .logo--absolute a');
+  var el = document.querySelector('.login .logo--absolute');
+  var a = el ? (el.tagName === 'A' ? el : el.querySelector('a')) : null;
+  if (!a) a = document.querySelector('.login a[href*="github.com"]');
   if (a) { a.href = 'https://img.nice.us.kg/'; a.target = '_self'; return; }
   if (++n < 80) setTimeout(f, 250);
 }f();})();
