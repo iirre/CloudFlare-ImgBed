@@ -159,3 +159,12 @@ body .login .login-container .password-input .el-input__inner::placeholder {
 #app .upload-list-item-url .el-input__inner {
   font-family: "Courier New", Monaco, monospace !important;
 }
+
+/* ============ 登录页：点击 loading 时保持按钮形状 (2026-10-13) ============
+   原样式点击后按钮会缩成圆形（width:48px + border-radius:50%），视觉突兀；
+   改为保持原矩形，仅内部转圈。 */
+body[data-login-page="user"] .login .login-container .submit.is-loading {
+  width: auto !important;
+  border-radius: 12px !important;
+  background-color: var(--primary-color) !important;
+}
