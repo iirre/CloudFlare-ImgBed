@@ -96,7 +96,7 @@ body[data-login-page="user"] .login .login-container .login-title {
   cursor: default !important;
   color: #fff !important;
   /* 圆体：系统幼圆优先，其次站酷快乐体（Webfont），英文字母保持 Pacifico 花体 */
-  font-family: Pacifico, "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
+  font-family: Pacifico, "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif !important;
 }
 @media (max-width: 768px) {
   body[data-login-page="user"] .login .login-container .login-title { font-size: 2.4rem !important; }
@@ -127,13 +127,13 @@ body[data-login-page="user"] .login .login-container .submit {
    注意输入框不用 Pacifico 开头——认证码可能含英文字母数字，
    放 Pacifico 会变成花体，很怪。 */
 body .login .login-container .submit {
-  font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
+  font-family: "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif !important;
 }
 body .login .login-container .password-input .el-input__inner {
-  font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
+  font-family: "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif !important;
 }
 body .login .login-container .password-input .el-input__inner::placeholder {
-  font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
+  font-family: "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif !important;
 }
 
 /* ============ 全站中文圆体：后台整体换圆体 (2026-10-13) ============
@@ -143,17 +143,17 @@ body .login .login-container .password-input .el-input__inner::placeholder {
    保留：.token-display（密钥）、.upload-list-item-url（文件URL）的等宽字体；
    登录页标题的 Pacifico 花体由下面的专用规则保护。 */
 :root {
-  --el-font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif !important;
+  --el-font-family: "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif !important;
 }
 #app {
-  font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif !important;
+  font-family: "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif !important;
 }
 .el-message .el-message__content {
-  font-family: "YouYuan", "幼圆", "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
+  font-family: "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !important;
 }
 /* 登录页标题：保持 Pacifico 花体（ImgHub）+ 圆体中文组合，不被 #app 规则覆盖 */
 #app .login .login-container .login-title {
-  font-family: Pacifico, "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
+  font-family: Pacifico, "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif !important;
 }
 /* 密钥和文件URL保持等宽字体，不被 #app 规则覆盖 */
 #app .token-display,
