@@ -85,20 +85,20 @@ body[data-login-page="user"] .login .login-container {
   gap: 16px 12px !important;
   align-items: center;
   justify-items: stretch;
-  max-width: 620px !important;
+  max-width: 700px !important;
   padding: 28px 0 !important;
 }
 body[data-login-page="user"] .login .login-container .login-title {
   grid-area: title;
   justify-self: center;
-  font-size: 2.8rem !important;
+  font-size: 4.2rem !important;
   margin-bottom: 16px !important;
   cursor: default !important;
   /* 圆体：系统幼圆优先，其次站酷快乐体（Webfont），英文字母保持 Pacifico 花体 */
   font-family: Pacifico, "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
 }
 @media (max-width: 768px) {
-  body[data-login-page="user"] .login .login-container .login-title { font-size: 1.6rem !important; }
+  body[data-login-page="user"] .login .login-container .login-title { font-size: 2.4rem !important; }
 }
 body[data-login-page="user"] .login .login-container .input-container {
   display: contents !important;
