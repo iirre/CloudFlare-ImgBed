@@ -23,6 +23,12 @@
   }
   init();
 })();
+/* 用户登录页：左上角 logo 改链到本站首页（原链向上游 GitHub） */
+(function(){var n=0;function f(){
+  var a = document.querySelector('.login .logo--absolute a');
+  if (a) { a.href = 'https://img.nice.us.kg/'; a.target = '_self'; return; }
+  if (++n < 80) setTimeout(f, 250);
+}f();})();
 /* 用户登录页：补输入框占位提示（上游未配 placeholder，原靠"密码"标签提示，标签已按需求隐藏） */
 (function(){var n=0;function f(){
   if (document.body.dataset.loginPage !== 'user') { if (++n < 80) setTimeout(f, 250); return; }

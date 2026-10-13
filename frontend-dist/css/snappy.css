@@ -94,6 +94,7 @@ body[data-login-page="user"] .login .login-container .login-title {
   font-size: 4.2rem !important;
   margin-bottom: 16px !important;
   cursor: default !important;
+  color: #fff !important;
   /* 圆体：系统幼圆优先，其次站酷快乐体（Webfont），英文字母保持 Pacifico 花体 */
   font-family: Pacifico, "YouYuan", "幼圆", "ZCOOL KuaiLe", "Noto Sans SC", sans-serif !important;
 }
@@ -169,9 +170,9 @@ body[data-login-page="user"] .login .login-container .submit.is-loading {
   background-color: var(--primary-color) !important;
 }
 
-/* ============ 登录页：左上角 logo 不跳转 (2026-10-13) ============
-   图标保留，仅禁用其 GitHub 链接跳转。 */
+/* ============ 登录页：左上角 logo 链到本站首页 (2026-10-13) ============
+   原链向上游 GitHub 仓库，改为本站首页；链接由 JS 重写 href。 */
 body[data-login-page="user"] .login .logo--absolute {
-  pointer-events: none !important;
-  cursor: default !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
 }
