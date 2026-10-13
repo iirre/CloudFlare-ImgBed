@@ -169,7 +169,9 @@ body[data-login-page="user"] .login .login-container .submit.is-loading {
   background-color: var(--primary-color) !important;
 }
 
-/* ============ 登录页：去掉左上角 GitHub logo (2026-10-13) ============ */
+/* ============ 登录页：左上角 logo 不跳转 (2026-10-13) ============
+   图标保留，仅禁用其 GitHub 链接跳转。 */
 body[data-login-page="user"] .login .logo--absolute {
-  display: none !important;
+  pointer-events: none !important;
+  cursor: default !important;
 }
