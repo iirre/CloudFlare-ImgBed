@@ -168,3 +168,8 @@ body[data-login-page="user"] .login .login-container .submit.is-loading {
   border-radius: 12px !important;
   background-color: var(--primary-color) !important;
 }
+
+/* ============ 登录页：去掉左上角 GitHub logo (2026-10-13) ============ */
+body[data-login-page="user"] .login .logo--absolute {
+  display: none !important;
+}
