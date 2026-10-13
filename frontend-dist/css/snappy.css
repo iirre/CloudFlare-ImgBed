@@ -176,3 +176,16 @@ body[data-login-page="user"] .login .logo--absolute {
   pointer-events: auto !important;
   cursor: pointer !important;
 }
+
+/* ============ 上传页标题：放大1.5倍 + 锁白 (2026-10-13) ============
+   原色为灰(#4e5969/#a1a1aa)，在背景图上显暗；原2.25rem放大到3.375rem */
+.title[data-v-9426cafc] {
+  font-size: 3.375rem !important;
+  color: #fff !important;
+}
+@media (min-width: 769px) and (max-height: 1050px) {
+  .title[data-v-9426cafc] { font-size: 2.8rem !important; }
+}
+@media (max-width: 768px) {
+  .title[data-v-9426cafc] { font-size: 2.1rem !important; }
+}
