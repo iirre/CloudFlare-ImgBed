@@ -188,6 +188,7 @@ body[data-login-page="user"] .login .logo--absolute {
   font-size: 3.375rem !important;
   color: #fff !important;
   -webkit-text-stroke-color: rgba(255,255,255,.55) !important;
+  font-family: Pacifico, "ZCOOL KuaiLe", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif !important;
 }
 .title[data-v-9426cafc] .main-title {
   pointer-events: none !important;
